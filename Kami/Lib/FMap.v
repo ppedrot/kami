@@ -425,9 +425,9 @@ Module FMapListEq (UOT : UsualOrderedType) <: FMapInterface.S with Module E := U
       specialize (H0 a).
       setoid_rewrite Facts.P.F.elements_mapsto_iff in H0. simpl in H0.
       firstorder.
-      edestruct H as [??]; eauto.
+      edestruct (H e) as [??]; eauto.
       specialize (H0 e x H2 H3); subst; auto.
-      edestruct H1 as [??]; eauto.
+      edestruct (H1 e) as [??]; eauto.
       specialize (H0 x e H3 H2); subst; auto.
   Qed.
 

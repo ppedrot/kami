@@ -611,7 +611,7 @@ Proof.
   - inv H; constructor.
     remember (initRegs (getRegInits ((ma ++ mb) ++ mc)%kami)).
     induction HMultistepBeh.
-    + subst; constructor.
+    + subst o1; constructor.
       p_equal H; f_equal.
       simpl; rewrite app_assoc; auto.
     + constructor; auto.
@@ -632,7 +632,7 @@ Proof.
   - inv H; constructor.
     remember (initRegs (getRegInits (ma ++ mb ++ mc)%kami)).
     induction HMultistepBeh.
-    + subst; constructor.
+    + subst o1; constructor.
       p_equal H; f_equal.
       simpl; rewrite app_assoc; auto.
     + constructor; auto.
@@ -1366,7 +1366,7 @@ Proof.
   - inv H; constructor; simpl in *.
     remember (initRegs (regs1 ++ regs2)).
     induction HMultistepBeh.
-    + subst; constructor.
+    + subst o1; constructor.
       p_equal H; f_equal.
     + constructor; auto.
       clear -HStep.
